@@ -17,11 +17,11 @@ import java.util.Arrays;
 
 public class Anagram {
 
-	public  boolean areAnagram(char[] str1,char[] str2){
+	public  boolean areAnagram(char[] str2,char[] str3){
 		
 		//Get lenght of both String
-		int leng1=str1.length;
-		int leng2=str2.length;
+		int leng1=str2.length;
+		int leng2=str3.length;
 		
 		//Check for the length equals
 		if(leng1!=leng2){
@@ -29,12 +29,12 @@ public class Anagram {
 		}
 		
 		//Get Sorts an String
-		Arrays.sort(str1);
 		Arrays.sort(str2);
+		Arrays.sort(str3);
 		
 		for(int i=0;i<leng1;i++){
 			
-			if(str1[i]!=str2[i]){
+			if(str2[i]!=str3[i]){
 				return false;
 			}
 		}

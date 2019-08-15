@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import com.Algorithms.misc.Anagram;
 
-public class AnagramTest {
+public class AnagramTestJ {
     @Test
 	public void test(){
 		
