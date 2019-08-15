@@ -28,19 +28,40 @@ public class Anagram {
 			return false;
 		}
 		
-		//Get Sorts an String
+		/*//Get Sorts an String
 		Arrays.sort(str2);
-		Arrays.sort(str3);
-		
+		Arrays.sort(str3);*/
+		char [] ch=sort(str2);
+		char [] ch1=sort(str3);
+
 		for(int i=0;i<leng1;i++){
 			
-			if(str2[i]!=str3[i]){
+			if(ch[i]!=ch1[i]){
 				return false;
 			}
 		}
 		
 		return true;
 
+	}
+	
+	//let write custom logic for the sort
+	
+	private char[] sort(char[] generic) {
+		int len = generic.length;
+		for (int i = 0; i < len - 1; i++) {
+			for (int j = 0; j < len - i - 1; j++) {
+				if (generic[j] > generic[j + 1]) {
+					char temp = generic[j];
+					generic[j] = generic[j + 1];
+					generic[j + 1] = temp;
+				}
+
+			}
+
+		}
+
+		return generic;
 	}
 	
 }
